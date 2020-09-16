@@ -11,4 +11,16 @@ services:
     expose:
       - "8080"
     volumes:
-      - ./client 
+	  - ./client 
+	api:
+    container_name: web_api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: meetup-app/api
+    ports:
+      - "1234:1234"
+    expose:
+      - "1234"
+    volumes:
+      - ./api
