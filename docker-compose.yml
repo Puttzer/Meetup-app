@@ -1,0 +1,14 @@
+version: "3"
+services:
+  client:
+    container_name: web_client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: meetup-app/client
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    volumes:
+      - ./client 
