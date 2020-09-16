@@ -4,7 +4,8 @@
   "description": "This will be the backend for the meetup app",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+	"dev": "nodemon app.js",
+	"start":"node app.js"
   },
   "keywords": [],
   "author": "Patrick Carragher",

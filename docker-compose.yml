@@ -1,3 +1,4 @@
+
 version: "3"
 services:
   client:
@@ -11,8 +12,10 @@ services:
     expose:
       - "8080"
     volumes:
-	  - ./client 
-	api:
+      - ./client
+    links:
+      - api
+  api:
     container_name: web_api
     build:
       context: ./api
