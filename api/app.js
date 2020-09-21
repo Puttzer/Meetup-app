@@ -1,17 +1,13 @@
 // Backend stuff
 
 const express = require('express')
-const cors = require('cors')
-
 const app = express()
-app.use(cors())
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "/public")));
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public", "index.html"))
+);
 
 const PORT = process.env.PORT || 1234;
-
-app.get('/', (req,res)=>{
-	res.json({
-		message:"IF THIS MESSAGE SHOWS THEN APP.GET WORKS ON THE BACKEND"
-	})
-})
-
-app.listen(PORT, () => console.log(`Server Online and now running on port:${PORT} `));
+app.listen(PORT, () => console.log(`Server Online and now running on port ${PORT} `));
