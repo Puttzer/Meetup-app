@@ -1,0 +1,29 @@
+{
+	"event":[
+		{
+			"id": 1,
+			"title":"RTX @ Home!",
+			"details":"RTX is the world’s greatest celebration of animation, gaming, comedy, and internet culture, where amazing entertainment and the best fans in the world meet up for the best weekend of the year.",
+			"venue":"At your very own home, Start September 15th! ends on the 25th."
+		},
+		{
+			"id": 2,
+			"title":"Spring here it cometh!",
+			"details":"Spring cleaning event",
+			"venue":"Closest park you can find"
+		},
+		{
+			"id": 3,
+			"title":"test 3",
+			"details":"DETAILS 3",
+			"venue":" VENUE 3"
+		},
+		{
+			"id": 4,
+			"title":" TEST 4",
+			"details":" DETAILS 4",
+			"venue":" VENUE 4"
+		},
+		
+	]
+}
