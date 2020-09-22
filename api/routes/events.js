@@ -12,6 +12,7 @@ console.log(EventDB )
 
 router.get("/", async (req,res) =>{
 	const event = fs.createReadStream("./data/event.json")
+	console.log(event)
 	event.pipe(res)
 	console.log(res)
 })
