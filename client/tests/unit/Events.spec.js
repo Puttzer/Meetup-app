@@ -15,9 +15,9 @@ jest.mock("axios", () => ({
 		  });
 	  })
 
-	  test('should mock an axios call so that we get the title of the first meetup', async() => {
+	  test('should mock an axios call so that we get the title of the first listed meetup', async() => {
 		  await wrapper.vm.$nextTick(() =>{
-			  console.log(wrapper.vm.items);
+			  console.log(title);
 			  expect(wrapper.vm.items).toEqual([{title: "RTX @ Home!"}])
 		  })
 	  });
