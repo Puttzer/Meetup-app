@@ -7,13 +7,12 @@ const EventDB = new DataStore({
 	filename: "db/events.db",
 	autoload: true
 });
-console.log(EventDB )
+// console.log(EventDB )
 
-router.get("/", async (req,res) =>{
+router.get("/", (req,res) =>{
 	const event = fs.createReadStream("./data/event.json")
-	console.log(event)
 	event.pipe(res)
-	console.log(res)
+	console.log("Sent events list")
 })
 
 module.exports=router;

@@ -1,13 +1,17 @@
 import { shallowMount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import VueRouter from "vue-router"
-import Vuex from "vuex"
 
 describe('HeaderComponent.vue', ()=> {
 	let wrapper;
 
 	beforeEach(()=>{
-		wrapper = shallowMount(HeaderComponent)
+		wrapper = shallowMount(HeaderComponent, {
+			stubs:{
+				RouterLink: RouterLinkStub
+			}
+		})
+		
 	})
 
 	test('should should check if "navbar" is visible', () => {
