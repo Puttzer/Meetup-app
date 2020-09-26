@@ -39,28 +39,5 @@ describe('HeaderComponent.vue', ()=> {
 		expect(wrapper.findComponent(RouterLinkStub).props().to).toBe("/")
 	});
 
-	test('should check if pressing  "Events" in navbar takes you to "/events"', async () => {
-		const localVue = createLocalVue();
-		localVue.use(VueRouter);
-
-		const routes =[{path: "/events", name:"Events"}];
-
-		const router = new VueRouter({
-			routes,
-		})
-
-		const wrapper = shallowMount(HeaderComponent, {
-			localVue,
-			router,
-			stubs:{
-				RouterLink: RouterLinkStub,
-			},
-		})
-
-		await wrapper.findAll(".event-route").trigger("click",{
-			button: 1,
-		})
-		
-		expect(wrapper.findComponent(RouterLinkStub).props().to).toBe("/events")
-	});
+	
 })
