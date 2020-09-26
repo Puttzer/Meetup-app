@@ -1,10 +1,10 @@
 <template>
-	<ul class="Events">
+	<ul class="events">
         <li
           v-for="item in items.event"
           :key="item.id"
         >
-          <div class="Events-item">
+          <div class="events-Item" >
             <h3 class="title">{{ item.title }}</h3>
             <h4 class="details">{{ item.details }}</h4>
             <p class="venue">{{ item.venue }}</p>

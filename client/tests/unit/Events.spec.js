@@ -21,4 +21,8 @@ jest.mock("axios", () => ({
 			  expect(wrapper.vm.items).toEqual([{title: "RTX @ Home!"}])
 		  })
 	  });
+
+	  test('should allow a user to click on a meetup "card"', () => {
+
+	  });
   })
