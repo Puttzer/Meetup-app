@@ -22,7 +22,5 @@ jest.mock("axios", () => ({
 		  })
 	  });
 
-	  test('should allow a user to click on a meetup "card"', () => {
 
-	  });
   })
