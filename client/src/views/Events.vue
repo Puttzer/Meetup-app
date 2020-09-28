@@ -19,15 +19,10 @@
 	export default {
 		name:"Events",
 		created() {
-			// const result = await axios.get("http://localhost:1234/api/events");
-			// this.events = result.data;
+			
 			this.$store.dispatch('getEvents')
 		},
-		// data() {
-		// 	return {
-		// 		events: {}
-		// 	}
-		// },
+		
 		computed: {
 			...mapState(['events'])
 		}
