@@ -1,17 +1,15 @@
 <template>
   <div class="home">
-    <HeaderComponent />
+    <Featured />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HeaderComponent from '@/components/HeaderComponent.vue'
-
+import Featured from "@/components/Featured";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HeaderComponent,
-  }
-}
+    Featured,
+  },
+};
 </script>
