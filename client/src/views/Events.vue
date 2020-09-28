@@ -1,30 +1,35 @@
 <template>
 	<ul class="events">
         <li
-          v-for="item in items.event"
-          :key="item.id"
+          v-for="event in events"
+          :key="event.id"
         >
-          <div class="events-Item" >
-            <h3 class="title">{{ item.title }}</h3>
-            <h4 class="details">{{ item.details }}</h4>
-            <p class="venue">{{ item.venue }}</p>
+          <div class="events-event" >
+            <h3 class="title">{{ event.title }}</h3>
+            <h4 class="details">{{ event.details }}</h4>
+            <p class="venue">{{ event.venue }}</p>
           </div>
         </li>
     </ul>
 </template>
 
 <script>
-	import axios from "axios";
+	// import axios from "axios";
+	import {mapState} from 'vuex'
 	export default {
 		name:"Events",
-		async created() {
-			const result = await axios.get("http://localhost:1234/api/events");
-			this.items = result.data;
+		created() {
+			// const result = await axios.get("http://localhost:1234/api/events");
+			// this.events = result.data;
+			this.$store.dispatch('getEvents')
 		},
-		data() {
-			return {
-				items: {}
-			}
+		// data() {
+		// 	return {
+		// 		events: {}
+		// 	}
+		// },
+		computed: {
+			...mapState(['events'])
 		}
 	}
 </script>
