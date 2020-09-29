@@ -3,9 +3,7 @@
 // review a meetup
 import{shallowMount} from "@vue/test-utils";
 import FullCard from "@/components/FullCard.vue"
-jest.mock("axios", () => ({
-	get: () => Promise.resolve({ data: [{ title: "RTX @ Home!" }] }),
-}));
+
 
 describe("FullCard", ()=>{
 	let wrapper = shallowMount(FullCard)
