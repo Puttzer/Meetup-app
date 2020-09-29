@@ -30,7 +30,8 @@ export default {
   color: #494892;
   font-size: 20px;
   font-family: "Fira Code", monospace;
-  background-color: blanchedalmond;
+//   temp color, need to see borders
+  background-color: rgba(255, 153, 0, 0.233);
 
   &:link {
     color: #494892;
