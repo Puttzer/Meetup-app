@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Featured from "@/components/Featured";
+import Featured from "../components/Featured";
 export default {
   name: "Home",
   components: {

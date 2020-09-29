@@ -8,7 +8,7 @@ const localVue = createLocalVue()
 localVue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
-		events: [{},{}]
+		events: [{}, {}]
 	},
 	mutations: {
 		SET_EVENTS_DATA(state, events) {
@@ -25,7 +25,7 @@ const store = new Vuex.Store({
 	},
 	getters: {
 		getFeatured(state) {
-			return state.events.slice(0,2)
+			return state.events.slice(0, 2)
 		}
 	}
 })
@@ -57,8 +57,8 @@ describe("Featured.vue", () => {
 	test('should check if user can interact with a featured meetups "Card" ', async () => {
 		const event = wrapper.find('.featured-meetups')
 		await event.trigger("click")
-		console.log("A featured event is clicked? = ",wrapper.vm.isClicked)
-		wrapper.vm.$nextTick(()=>{
+		console.log("A featured event is clicked? = ", wrapper.vm.isClicked)
+		wrapper.vm.$nextTick(() => {
 			expect(wrapper.vm.isClicked).toBe(true)
 		})
 
