@@ -57,6 +57,4 @@ h1 {
   font-size: 27px;
   font-family: "Fira Code", monospace;
 }
-
-
 </style>

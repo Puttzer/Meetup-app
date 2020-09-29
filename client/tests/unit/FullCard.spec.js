@@ -3,6 +3,9 @@
 // review a meetup
 import{shallowMount} from "@vue/test-utils";
 import FullCard from "@/components/FullCard.vue"
+jest.mock("axios", () => ({
+	get: () => Promise.resolve({ data: [{ title: "RTX @ Home!" }] }),
+}));
 
 describe("FullCard", ()=>{
 	let wrapper = shallowMount(FullCard)
@@ -11,9 +14,9 @@ describe("FullCard", ()=>{
 		expect(wrapper.find(".signup").exists()).toBe(true);
 	  });
 
-	test('should respond with a confirmation that youve been added to attendees, when clicking on attend button', () => {
+	// test('should respond with a confirmation that youve been added to attendees, when clicking on attend button', () => {
 		
-	});
+	// });
 
 	// test("should replace the text on the button when clicking on it to: You've already signed up! ", () => {
 		
