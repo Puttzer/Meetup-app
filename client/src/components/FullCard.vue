@@ -4,6 +4,7 @@
 
     <div class="upper">
       <!-- placeholder image -->
+	  <!-- quick addon -->
       <img src="../assets/rtx@home.png" alt="rtx@home" />
       <p>{{ this.details }}</p>
     </div>
