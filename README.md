@@ -4,6 +4,15 @@
 	- Projektet är uppdelat i två kategorier, en **client** mapp och en **api** mapp.
 	- Clientside använder vi **Vue** och i backend använder vi **node** och **express**
 
+- LEVELUPS använda:
+
+	```
+	 API/databas
+	```
+	```
+	 Acceptanstester
+	```
+
 # To the clouds!
 
 - Jag hade hade valet att använda vilket molntjänst som helst att hysa mitt projekt. I detta fall använde jag Heroku.
