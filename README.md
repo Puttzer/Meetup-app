@@ -50,7 +50,9 @@
 
 # What you see is what you get!
 
-- Det är dags för Frontend!, Denna stycke är in progress just nu och slutförs när designen på appen är klart
+- Här kommer saker som jag inte hann med!
+
+	- Reloadar man på **/events** eller **/events/:id  (FullCard)** så försvinner all content från state 
 
 ```
 I. AM. A. ROBOT. FROM. THE. FUTURE.
