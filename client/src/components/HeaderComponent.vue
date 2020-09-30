@@ -1,10 +1,17 @@
 <template>
   <nav class="navbar">
-    <img src="../assets/logo.png" alt="logo" class="logo" />
-      <ul class="nav-links">
-        <router-link class="home-route" to="/">Home</router-link>
-        <router-link class="events-route" to="/events">Events</router-link>
-      </ul>
+    <img src="../assets/logo.jpg" alt="logo" class="logo" />
+    <div class="links">
+      <router-link class="home-route" to="/" style="text-decoration: none"
+        >Home</router-link
+      >
+      <router-link
+        class="events-route"
+        to="/events"
+        style="text-decoration: none"
+        >Events</router-link
+      >
+    </div>
   </nav>
 </template>
 
@@ -15,5 +22,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  color: #494892;
+  font-size: 20px;
 
+  &:link {
+    color: #494892;
+  }
+}
+
+.links {
+  padding: 70px;
+  text-decoration: none;
+}
+
+.events-route {
+  padding: 110px;
+}
 </style>

@@ -15,7 +15,7 @@ export default new Vuex.Store({
 	},
 	actions: {
 		getEvents({ commit }) {
-			return axios.get('http://localhost:1234/api/events')
+			return axios.get('/api/events')
 				.then(({ data }) => {
 					commit('SET_EVENTS_DATA', data.event)
 				})
@@ -25,7 +25,7 @@ export default new Vuex.Store({
 	},
 	getters: {
 		getFeatured(state) {
-			return state.events.slice(0,2)
+			return state.events.slice(0, 2)
 		}
 	}
 })

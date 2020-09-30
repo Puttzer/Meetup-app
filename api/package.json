@@ -4,8 +4,8 @@
   "description": "This will be the backend for the meetup app",
   "main": "app.js",
   "scripts": {
-	"dev": "nodemon app.js",
-	"start":"node app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Patrick Carragher",
@@ -13,7 +13,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "nedb": "^1.8.0"
+    "nedb-promise": "^2.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
