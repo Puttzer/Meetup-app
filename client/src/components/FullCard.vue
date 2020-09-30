@@ -1,61 +1,156 @@
 <template>
-  <div class="main">
-    <h1 class="title">{{ this.title }}</h1>
-
+  <div class="main" v-if="featured">
     <div class="upper">
-      <!-- placeholder image -->
-	  <!-- quick addon -->
-      <img src="../assets/rtx@home.png" alt="rtx@home" />
-      <p>{{ this.details }}</p>
+      <img :src="require('../assets/' + featured.image + '.jpg')" />
+      <h1 class="title">{{ featured.title }}</h1>
+      <h4>{{ featured.venue }}</h4>
+      <button class="signup">Attend</button>
     </div>
 
     <div class="lower">
-      <h4>{{ this.venue }}</h4>
-      <textarea id="review-field" cols="30" rows="10"></textarea>
-    </div>
+      <p class="details">{{ featured.details }}</p>
 
-    <div class="bottom">
-      <button class="signup">Attend</button>
-      <button class="review">Review this event!</button>
+      <form @submit.prevent="addReview">
+        <textarea
+          id="review-field"
+          cols="30"
+          rows="10"
+          v-model="review"
+          placeholder="Whats yer review mate?"
+        ></textarea
+        ><button class="review">Review this event!</button>
+        <h5>Reviews:</h5>
+        <ul>
+          <li
+            class="review-item"
+            v-for="(review, index) in reviews"
+            :key="index"
+          >
+            <p>
+              {{ review }}
+            </p>
+          </li>
+        </ul>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 export default {
-  created() {
-    axios
-      .get(`http://localhost:1234/api/events/${this.$route.params.id}`)
-      .then(({ data }) => {
-        this.title = data.title;
-        this.details = data.details;
-        this.venue = data.venue;
-      });
-  },
+  props: ["featured"],
+  // created() {
+  //   axios
+  //     .get(`http://localhost:1234/api/events/${this.$route.params.id}`)
+  //     .then(({ data }) => {
+  //       this.title = data.title;
+  //       this.details = data.details;
+  //       this.venue = data.venue;
+  //       this.image = data.image;
+  //     });
+  // },
   data() {
     return {
-      title: "",
-      details: "",
-      venue: "",
+      review: "",
+      reviews: [],
     };
+  },
+
+  methods: {
+    addReview() {
+      this.reviews.push(this.review);
+      this.review = "";
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
-
 .main {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, auto);
-  background-color: rgba(0, 0, 255, 0.281);
-  height: 100%;
   width: 100%;
+  max-width: 1250px;
+  margin: auto;
 }
-h1 {
+img {
+  width: 550px;
+  display: block;
+}
+.title {
   font-size: 27px;
-  font-family: "Fira Code", monospace;
+  margin: 1rem 0;
+}
+.upper h4 {
+  display: inline-block;
+  margin: 0rem 0;
+}
+h5 {
+  margin: 1rem 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.signup {
+  display: block;
+  margin: 1rem 0;
+  display: block;
+  background: #494892;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 30px;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 0.25px;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+.review {
+  display: block;
+  background: #494892;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 30px;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 0.25px;
+  font-size: 16px;
+}
+
+.review-item {
+  margin: 1rem 0;
+}
+
+textarea {
+  margin: 2rem 0;
+  resize: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  font-size: 16px;
+
+  &:focus {
+    color: #494892;
+  }
+}
+
+.details {
+  font-weight: bold;
+}
+.lower {
+  max-width: 450px;
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>

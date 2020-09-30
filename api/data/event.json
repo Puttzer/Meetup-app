@@ -2,45 +2,45 @@
 	"event": [
 		{
 			"id": 1,
-			"title":"RTX @ Home!",
-			"details":"RTX is the world’s greatest celebration of animation, gaming, comedy, and internet culture, where amazing entertainment and the best fans in the world meet up for the best weekend of the year.",
-			"venue":"At your very own home, Start September 15th! ends on the 25th.",
-			"image":""
+			"title": "RTX @ Home!",
+			"details": "RTX is the world’s greatest celebration of animation, gaming, comedy, and internet culture, where amazing entertainment and the best fans in the world meet up for the best weekend of the year.",
+			"venue": "At your very own home, Start September 15th! ends on the 25th.",
+			"image": "rtx@home"
 		},
 		{
 			"id": 2,
-			"title":"Spring here it cometh!",
-			"details":"Spring cleaning event",
-			"venue":"Closest park you can find",
-			"image":""
+			"title": "Spring here it cometh!",
+			"details": "Spring cleaning event",
+			"venue": "Closest park you can find",
+			"image": "springcleaning"
 		},
 		{
 			"id": 3,
-			"title":"test 3",
-			"details":"DETAILS 3",
-			"venue":" VENUE 3",
-			"image":""
+			"title": "Mercenary Park",
+			"details": "Ever since the first apes climbed out of the trees, there were apes who did it faster. Some apes just fell out of the tree. It's a sad fact that all apes are not created equal. Presenting our newest tree-climbing-down simulator, matchmaking. Play alone or with your friends against players of similar skill levels. Climb out of that tree at your own speed, confident that the apes around you arent beating you to the bananas. Which technically grow IN trees, but maybe the ripest ones probably fall to the ground? Yeah, that makes sense. Look, this isnt a banana simulator, people.",
+			"venue": " In the Jungle inferno, October 20th 2017",
+			"image": "mann3"
 		},
 		{
 			"id": 4,
-			"title":" TEST 4",
-			"details":" DETAILS 4",
-			"venue":" VENUE 4",
-			"image":""
+			"title": " Mercenary Park retrospective",
+			"details": "Ever since the first dolphins crawled out of the ocean, they've longed to pick a fight with the fat, banana-eating apes over by the trees. And now they can, in a structured dolphin-safe environment",
+			"venue": "In the Jungle inferno, October 21st 2017 ",
+			"image": "mann4"
 		},
 		{
 			"id": 5,
-			"title":" TEST 5",
-			"details":" DETAILS 5",
-			"venue":" VENUE 5",
-			"image":""
+			"title": "HELLERWEEEN",
+			"details": "Misfortune telling! Dangerous rides! The world's biggest test-your-strength strongman machine! Merasmus's Carnival of Carnage has it all... except corpses! Due to a miscommunication with his contractor, Merasmus forgot to build his evil carnival on top of an ancient burial ground. But thanks to an eldritch loophole, he can still salvage his sinister sideshow by piling an impromptu burial ground on top of it. If only he knew an unstable group of hired killers willing to rack up a body count fast.",
+			"venue": "in HELLTOWER",
+			"image": "mann5"
 		},
 		{
 			"id": 6,
-			"title":" TEST 6",
-			"details":" DETAILS 6",
-			"venue":" VENUE 6",
-			"image":""
+			"title": "Australian Christmas",
+			"details": "In the classic Smissmas story 'The Gift of the Magi', a girl sells all of her hair to a hair warehouse to buy her boyfriend a watch chain, but in a shocking twist, he looks at his watch and remembers she's bald and it's time to break up with her. That's when the Magi show up, and it is a BLOODBATH. The point is, giving people gifts can bite you in the ass. Too much potential for twist endings. So this Smissmas, why not sit back, scroll down, and leave the gift-giving to us.",
+			"venue": "Some place in the outback",
+			"image": "mann6"
 		}
 	]
 }

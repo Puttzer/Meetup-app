@@ -8,7 +8,24 @@ const localVue = createLocalVue()
 localVue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
-		events: [{}, {}]
+		events: [
+
+			{
+				id: 1,
+				title: "RTX @ Home!",
+				details: "RTX is the world’s greatest celebration of animation, gaming, comedy, and internet culture, where amazing entertainment and the best fans in the world meet up for the best weekend of the year.",
+				venue: "At your very own home, Start September 15th! ends on the 25th.",
+				image: "rtx@home"
+			},
+			{
+				id: 2,
+				title: "Spring here it cometh!",
+				details: "Spring cleaning event",
+				venue: "Closest park you can find",
+				image: "springcleaning"
+			},
+
+		]
 	},
 	mutations: {
 		SET_EVENTS_DATA(state, events) {
@@ -17,7 +34,7 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		getEvents({ commit }) {
-			return axios.get('http://localhost:1234/api/events')
+			return axios.get('/api/events')
 				.then(({ data }) => {
 					commit('SET_EVENTS_DATA', data.event)
 				})
@@ -44,6 +61,7 @@ describe("Featured.vue", () => {
 					isClicked: false
 				};
 			},
+			stubs: ['router-link']
 		})
 	})
 
@@ -57,10 +75,9 @@ describe("Featured.vue", () => {
 	test('should check if user can interact with a featured meetups "Card" ', async () => {
 		const event = wrapper.find('.featured-meetups')
 		await event.trigger("click")
-		console.log("A featured event is clicked? = ", wrapper.vm.isClicked)
-		wrapper.vm.$nextTick(() => {
-			expect(wrapper.vm.isClicked).toBe(true)
-		})
+		console.log("Can a featured event be clicked? = ", wrapper.vm.isClicked)
+		await wrapper.vm.$nextTick()
+		expect(wrapper.vm.isClicked).toBe(true)
 
 	});
 

@@ -4,6 +4,15 @@
 	- Projektet är uppdelat i två kategorier, en **client** mapp och en **api** mapp.
 	- Clientside använder vi **Vue** och i backend använder vi **node** och **express**
 
+- LEVELUPS använda:
+
+	```
+	 API/databas
+	```
+	```
+	 Acceptanstester
+	```
+
 # To the clouds!
 
 - Jag hade hade valet att använda vilket molntjänst som helst att hysa mitt projekt. I detta fall använde jag Heroku.
@@ -41,7 +50,9 @@
 
 # What you see is what you get!
 
-- Det är dags för Frontend!, Denna stycke är in progress just nu och slutförs när designen på appen är klart
+- Här kommer saker som jag inte hann med!
+
+	- Reloadar man på **/events** eller **/events/:id  (FullCard)** så försvinner all content från state 
 
 ```
 I. AM. A. ROBOT. FROM. THE. FUTURE.

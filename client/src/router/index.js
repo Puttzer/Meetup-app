@@ -17,6 +17,8 @@ const routes = [
 	},
 	{
 		path: '/events/:id',
+		name: "Event",
+		props: true,
 		component: () => import("../components/FullCard.vue")
 	}
 
