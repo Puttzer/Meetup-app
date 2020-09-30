@@ -22,14 +22,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 .navbar {
   display: flex;
   align-items: center;
   margin-right: auto;
   color: #494892;
   font-size: 20px;
-  font-family: "Fira Code", monospace;
 
   &:link {
     color: #494892;

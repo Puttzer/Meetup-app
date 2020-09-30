@@ -1,6 +1,3 @@
-// test should be:
-// sign up to meetup
-// review a meetup
 import { shallowMount, createLocalVue } from "@vue/test-utils";
 import FullCard from "@/components/FullCard.vue"
 import VueRouter from 'vue-router'

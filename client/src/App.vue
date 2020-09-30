@@ -16,9 +16,17 @@ export default {
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+}
+button {
+  font-family: "Fira Code", monospace;
 }
 </style>
