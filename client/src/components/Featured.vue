@@ -1,14 +1,18 @@
 <template>
   <div>
-    <a
+    <!--  @click="sendsTo = true"  TEST NEEDS TO BE SETUP-->
+    <router-link
+      :to="{ name: 'Event', params: { id: featured.id } }"
       class="featured-meetups"
-      @click="isClicked = true"
+      @click.native="isClicked = true"
       v-for="(featured, index) in getFeatured"
       :key="index"
     >
-      <h1>{{ featured.title }}</h1>
-      <p>{{ featured.venue }}</p>
-    </a>
+      <div class="card">
+        <h1>{{ featured.title }}</h1>
+        <p>{{ featured.venue }}</p>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -28,4 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card {
+  background-color: rgb(146, 126, 96);
+}
 </style>

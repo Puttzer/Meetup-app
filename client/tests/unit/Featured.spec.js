@@ -44,6 +44,7 @@ describe("Featured.vue", () => {
 					isClicked: false
 				};
 			},
+			stubs:['router-link']
 		})
 	})
 
@@ -57,10 +58,9 @@ describe("Featured.vue", () => {
 	test('should check if user can interact with a featured meetups "Card" ', async () => {
 		const event = wrapper.find('.featured-meetups')
 		await event.trigger("click")
-		console.log("A featured event is clicked? = ", wrapper.vm.isClicked)
-		wrapper.vm.$nextTick(() => {
-			expect(wrapper.vm.isClicked).toBe(true)
-		})
+		console.log("Can a featured event be clicked? = ", wrapper.vm.isClicked)
+		await wrapper.vm.$nextTick()
+		expect(wrapper.vm.isClicked).toBe(true)
 
 	});
 
