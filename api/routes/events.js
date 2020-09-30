@@ -9,6 +9,8 @@ const EventDB = new DataStore({
 });
 // console.log(EventDB )
 
+
+
 // /api/events
 router.get("/", (req,res) =>{
 	const event = fs.createReadStream("./data/event.json")
