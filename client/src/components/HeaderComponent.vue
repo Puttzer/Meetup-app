@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <img src="../assets/logo.png" alt="logo" class="logo" />
+    <img src="../assets/logo.jpg" alt="logo" class="logo" />
     <div class="links">
       <router-link class="home-route" to="/" style="text-decoration: none"
         >Home</router-link
@@ -30,8 +30,6 @@ export default {
   color: #494892;
   font-size: 20px;
   font-family: "Fira Code", monospace;
-//   temp color, need to see borders
-  background-color: rgba(255, 153, 0, 0.233);
 
   &:link {
     color: #494892;

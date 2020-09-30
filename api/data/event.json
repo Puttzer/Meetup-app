@@ -2,45 +2,45 @@
 	"event": [
 		{
 			"id": 1,
-			"title":"RTX @ Home!",
-			"details":"RTX is the world’s greatest celebration of animation, gaming, comedy, and internet culture, where amazing entertainment and the best fans in the world meet up for the best weekend of the year.",
-			"venue":"At your very own home, Start September 15th! ends on the 25th.",
-			"image":""
+			"title": "RTX @ Home!",
+			"details": "RTX is the world’s greatest celebration of animation, gaming, comedy, and internet culture, where amazing entertainment and the best fans in the world meet up for the best weekend of the year.",
+			"venue": "At your very own home, Start September 15th! ends on the 25th.",
+			"image": "rtx@home"
 		},
 		{
 			"id": 2,
-			"title":"Spring here it cometh!",
-			"details":"Spring cleaning event",
-			"venue":"Closest park you can find",
-			"image":""
+			"title": "Spring here it cometh!",
+			"details": "Spring cleaning event",
+			"venue": "Closest park you can find",
+			"image": "springcleaning"
 		},
 		{
 			"id": 3,
-			"title":"test 3",
-			"details":"DETAILS 3",
-			"venue":" VENUE 3",
-			"image":""
+			"title": "test 3",
+			"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+			"venue": " VENUE 3",
+			"image": "mann3"
 		},
 		{
 			"id": 4,
-			"title":" TEST 4",
-			"details":" DETAILS 4",
-			"venue":" VENUE 4",
-			"image":""
+			"title": " TEST 4",
+			"details": " DETAILS 4",
+			"venue": " VENUE 4",
+			"image": "mann4"
 		},
 		{
 			"id": 5,
-			"title":" TEST 5",
-			"details":" DETAILS 5",
-			"venue":" VENUE 5",
-			"image":""
+			"title": " TEST 5",
+			"details": " DETAILS 5",
+			"venue": " VENUE 5",
+			"image": "mann5"
 		},
 		{
 			"id": 6,
-			"title":" TEST 6",
-			"details":" DETAILS 6",
-			"venue":" VENUE 6",
-			"image":""
+			"title": " TEST 6",
+			"details": " DETAILS 6",
+			"venue": " VENUE 6",
+			"image": "mann6"
 		}
 	]
 }

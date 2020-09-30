@@ -1,44 +1,61 @@
 <template>
-  <div class="main">
-    <h1 class="title">{{ this.title }}</h1>
-
+  <div class="main" v-if="featured">
     <div class="upper">
-      <!-- placeholder image -->
-      <!-- quick addon -->
-      <img src="../assets/rtx@home.png" alt="rtx@home" />
-      <p>{{ this.details }}</p>
+      <h1 class="title">{{ featured.title }}</h1>
+
+      <img :src="require('../assets/' + featured.image + '.jpg')" />
+      <h4>{{ featured.venue }}</h4>
+      <button class="signup">Attend</button>
     </div>
 
     <div class="lower">
-      <h4>{{ this.venue }}</h4>
-      <textarea id="review-field" cols="30" rows="10"></textarea>
-    </div>
-
-    <div class="bottom">
-      <button class="signup">Attend</button>
-      <button class="review">Review this event!</button>
+      <p>{{ featured.details }}</p>
+      <ul>
+        <li class="review-item" v-for="(review, index) in reviews" :key="index">
+          <p>
+            {{ review }}
+          </p>
+        </li>
+      </ul>
+      <form @submit.prevent="addReview">
+        <textarea
+          id="review-field"
+          cols="30"
+          rows="10"
+          v-model="review"
+        ></textarea>
+        <button class="review">Review this event!</button>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 export default {
-  created() {
-    axios
-      .get(`http://localhost:1234/api/events/${this.$route.params.id}`)
-      .then(({ data }) => {
-        this.title = data.title;
-        this.details = data.details;
-        this.venue = data.venue;
-      });
-  },
+  props: ["featured"],
+  // created() {
+  //   axios
+  //     .get(`http://localhost:1234/api/events/${this.$route.params.id}`)
+  //     .then(({ data }) => {
+  //       this.title = data.title;
+  //       this.details = data.details;
+  //       this.venue = data.venue;
+  //       this.image = data.image;
+  //     });
+  // },
   data() {
     return {
-      title: "",
-      details: "",
-      venue: "",
+      review: "",
+      reviews: [],
     };
+  },
+
+  methods: {
+    addReview() {
+      this.reviews.push(this.review);
+      this.review = "";
+    },
   },
 };
 </script>
@@ -47,15 +64,45 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 .main {
+  padding: 2rem 1rem;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, auto);
-  background-color: rgba(0, 0, 255, 0.281);
-  height: 100%;
   width: 100%;
 }
-h1 {
+img {
+  width: 550px;
+  display: block;
+}
+.title {
   font-size: 27px;
   font-family: "Fira Code", monospace;
+}
+.upper h4 {
+  background-color: rgba(128, 128, 128, 0.274);
+  display: inline-block;
+}
+
+.signup {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+.review {
+  display: block;
+}
+
+.review-item {
+  margin: 1rem 0;
+}
+
+textarea {
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>

@@ -2,15 +2,21 @@
   <div>
     <!--  @click="sendsTo = true"  TEST NEEDS TO BE SETUP-->
     <router-link
-      :to="{ name: 'Event', params: { id: featured.id } }"
+      :to="{ name: 'Event', params: { id: featured.id, featured } }"
       class="featured-meetups"
       @click.native="isClicked = true"
       v-for="(featured, index) in getFeatured"
       :key="index"
     >
       <div class="card">
-        <h1>{{ featured.title }}</h1>
-        <p>{{ featured.venue }}</p>
+        <img
+          :src="require('../assets/' + featured.image + '.jpg')"
+          alt="eventIMG"
+        />
+        <div class="text">
+          <h1>{{ featured.title }}</h1>
+          <p>{{ featured.venue }}</p>
+        </div>
       </div>
     </router-link>
   </div>
