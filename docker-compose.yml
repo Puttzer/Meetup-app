@@ -22,8 +22,8 @@ services:
       dockerfile: Dockerfile
     image: meetup-app/api
     ports:
-      - "1234:1234"
+      - "5000:5000"
     expose:
-      - "1234"
+      - "5000"
     volumes:
       - ./api

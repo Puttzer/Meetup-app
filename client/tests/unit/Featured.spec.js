@@ -9,22 +9,22 @@ localVue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
 		events: [
-			
-				{
-					id: 1,
-					title:"RTX @ Home!",
-					details:"RTX is the world’s greatest celebration of animation, gaming, comedy, and internet culture, where amazing entertainment and the best fans in the world meet up for the best weekend of the year.",
-					venue:"At your very own home, Start September 15th! ends on the 25th.",
-					image:"rtx@home"
-				},
-				{
-					id: 2,
-					title:"Spring here it cometh!",
-					details:"Spring cleaning event",
-					venue:"Closest park you can find",
-					image:"springcleaning"
-				},
-			
+
+			{
+				id: 1,
+				title: "RTX @ Home!",
+				details: "RTX is the world’s greatest celebration of animation, gaming, comedy, and internet culture, where amazing entertainment and the best fans in the world meet up for the best weekend of the year.",
+				venue: "At your very own home, Start September 15th! ends on the 25th.",
+				image: "rtx@home"
+			},
+			{
+				id: 2,
+				title: "Spring here it cometh!",
+				details: "Spring cleaning event",
+				venue: "Closest park you can find",
+				image: "springcleaning"
+			},
+
 		]
 	},
 	mutations: {
@@ -34,7 +34,7 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		getEvents({ commit }) {
-			return axios.get('http://localhost:1234/api/events')
+			return axios.get('/api/events')
 				.then(({ data }) => {
 					commit('SET_EVENTS_DATA', data.event)
 				})
@@ -61,7 +61,7 @@ describe("Featured.vue", () => {
 					isClicked: false
 				};
 			},
-			stubs:['router-link']
+			stubs: ['router-link']
 		})
 	})
 
